@@ -1,38 +1,108 @@
-.App {
+/* Style global */
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f3f4f6;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+/* Conteneur principal */
+.container {
+  max-width: 900px;
+  width: 90%;
+  margin: 40px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Titre principal */
+h1 {
+  text-align: center;
+  color: #0078d7;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* Sous-titre */
+.subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* Filtre */
+.filter {
+  margin-bottom: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.filter label {
+  font-size: 1rem;
+  margin-right: 10px;
+  color: #444;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.filter select {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.filter select:focus {
+  outline: none;
+  border-color: #0078d7;
+  box-shadow: 0 0 6px rgba(0, 120, 215, 0.5);
 }
 
-.App-link {
-  color: #61dafb;
+/* Bloc d'entretien */
+.maintenance-item {
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.maintenance-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Titre du bloc */
+.maintenance-item h2 {
+  margin: 0 0 10px;
+  color: #444;
+  font-size: 1.5rem;
+}
+
+/* Coût approximatif */
+.cost {
+  font-size: 1rem;
+  color: #0078d7;
+  margin-bottom: 10px;
+}
+
+/* Liste des tâches */
+.maintenance-item ul {
+  padding-left: 20px;
+}
+
+.maintenance-item ul li {
+  margin-bottom: 5px;
+  font-size: 1rem;
+  color: #555;
 }
